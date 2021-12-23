@@ -1,0 +1,54 @@
+
+***********************************Disabled before date*********************************
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script> 
+<script language="javascript">
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#date_picker').attr('min',today);
+</script>
+
+<script language="javascript">
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
+        $('#date_picker1').attr('min',today);
+    </script>
+
+***********************************Disabled before date end*****************************
+
+
+***********************************INPUT FIELDS*************************************
+
+
+              <div class="col-lg-5 ml-5">
+                <div class="form-group">
+                    <label for="start_date">Start Date</label>
+                    <input type="date" class="form-control" id="date_picker" placeholder="Enter Start date" name="start_date" required>
+                    @error('start_date')<small class="text-danger">{{$message}}</small></br>@enderror
+                
+                </div>
+                </div>
+
+
+              <div class="col-lg-5 ml-5">
+                <div class="form-group">
+                  <label for="end_date">End Date</label>
+                  <input type="date" class="form-control" id="date_picker1" placeholder="Enter End Date" name="end_date" required>
+                  @error('end_date')<small class="text-danger">{{$message}}</small></br>@enderror
+                
+                </div>
+              </div>
+
+
+***********************************INPUT FIELDS END*************************************
+
+
+
